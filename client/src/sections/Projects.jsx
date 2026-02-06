@@ -1,6 +1,6 @@
 import { useMemo, useRef, useState } from "react";
-import Container from "../components/container";
-import SectionTitle from "../components/sectiontitle";
+import Container from "../components/Container";
+import SectionTitle from "../components/Sectiontitle";
 import { projects } from "../data/projects";
 import ProjectFilters from "../components/projects/ProjectFilters";
 import ProjectShowcase from "../components/projects/ProjectShowcase";

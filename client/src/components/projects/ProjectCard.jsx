@@ -1,12 +1,8 @@
-import Chip from "../chip";
+import Chip from "../Chip";
 import { ArrowSquareOut, GithubLogo, Sparkle } from "phosphor-react";
 
 export default function ProjectCard({ project, selected = false, onSelect }) {
   const hasMedia = project?.video?.thumbnail;
-
-  const thumbnailClass = selected
-    ? "h-full w-full object-cover object-center opacity-95 saturate-100 contrast-100 transition"
-    : "h-full w-full object-cover object-center opacity-80 saturate-75 contrast-90 grayscale transition group-hover:opacity-90";
 
   return (
     <article
@@ -23,7 +19,7 @@ export default function ProjectCard({ project, selected = false, onSelect }) {
           <img
             src={project.video.thumbnail}
             alt={project.video.title || `${project.title} demo`}
-            className={thumbnailClass}
+            className="h-full w-full object-cover object-center opacity-80 saturate-75 contrast-90 grayscale transition group-hover:opacity-90 group-hover:saturate-100 group-hover:grayscale-0"
             loading="lazy"
             draggable="false"
           />
@@ -89,7 +85,7 @@ export default function ProjectCard({ project, selected = false, onSelect }) {
           </div>
 
           {selected ? (
-            <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-3 py-1 text-[10px] font-semibold text-white shadow-sm ring-1 ring-emerald-700/30">
+            <div className="mt-2 inline-flex items-center gap-2 rounded-full bg-slate-900 px-3 py-1 text-[10px] font-semibold text-white">
               <Sparkle size={12} weight="fill" />
               Currently featured
             </div>

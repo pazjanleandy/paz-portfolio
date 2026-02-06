@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import Chip from "../chip";
+import Chip from "../Chip";
 import ProjectMedia from "../ProjectMedia";
 import Modal from "../Modal";
 import {
